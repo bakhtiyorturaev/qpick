@@ -11,9 +11,6 @@ schema_view = get_schema_view(
       title="QPICK API",
       default_version='v1',
       description="API hujjatlari",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="email@company.com"),
-      license=openapi.License(name="BSD License"),
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
@@ -30,4 +27,7 @@ urlpatterns = [
 
 
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
