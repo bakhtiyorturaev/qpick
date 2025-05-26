@@ -1,4 +1,4 @@
-
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-yi-=67#%z1(ue-2l)5gfo)49&1*lr*b=gi18!&bb3r92nz*@f6
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['baxtiyor2.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -93,5 +93,7 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
